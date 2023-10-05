@@ -44,7 +44,7 @@ $ sudo passwd user-1
 ## Настройка сети ОС
 1. Устанавливаем новое имя машины.
 ``` bash
-$ hostnamectl set-hostname deltajed-server-1
+$ hostnamectl set-hostname user-1
 ```
 ![Новое имя машины](./assets/3.png)
 
@@ -52,8 +52,7 @@ $ hostnamectl set-hostname deltajed-server-1
 
 ``` bash
 $ sudo timedatectl
-$ timedatectl list-timezones | grep Tashkent
-$ sudo timedatectl set-timezone Asia/Tashkent
+$ sudo timedatectl set-timezone Europe/Moscow
 $ sudo timedatectl
 ```
 
