@@ -72,7 +72,7 @@ $ sudo apt install net-tools
 ``` bash 
 $ hostname -I
 ```
-![Текущий ip](./assets/6.png)
+![Текущий ip](./assets/7.png)
 
 > Dynamic Host Configuration Protocol (DHCP) — автоматический предоставляет IP адреса и прочие настройки сети (маску сети, шлюз и т.п) компьютерам и различным устройствам в сети.
 
