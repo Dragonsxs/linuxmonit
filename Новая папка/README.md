@@ -136,10 +136,11 @@ $ sudo apt update
 $ sudo usermod -a -G sudo user-1
 $ su user-1
 $ cat /etc/hostname
-$ sudo hostname user-2
+$ sudo hostnamectl set-hostname user-2
 $ su sullustg
 ```
-![Выдача прав новому пользователю](./assets/15.png)
+![Выдача прав новому пользователю](./assets/13.png)
+![Смена hostname](./assets/15.png)
 
 ## Установка и настройка службы времени
 
