@@ -83,22 +83,21 @@ $ hostname -I
 $ wget -O - -q icanhazip.com
 $ curl ifconfig.me/ip
 ```
-![Внешний ip](./assets/7.png)
+![Внешний ip](./assets/8.png)
 
 > Так мы можем определить наш внутренний IP-адрес шлюза:
 
 ``` bash 
 $ ip route
 ```
-![Внутренний ip](./assets/8.png)
+![Внутренний ip](./assets/9.png)
 
 6. Задать статичные (заданные вручную, а не полученные от DHCP сервера) настройки ip, gw, dns (использовать публичный DNS серверы, например 1.1.1.1 или 8.8.8.8).
 
 ``` bash
 $ sudo vim /etc/netplan/00-installer-config.yaml
 ```
-![netplan до](./assets/9.png)
-![netplan после](./assets/10.png)
+![измененный netplan](./assets/10.png)
 
  > Изменили файл /etc/netplan/00-installer-config.yaml, применили изменения в netplan, перезагрузили машину.
 ``` bash
@@ -111,14 +110,14 @@ $ reboot
 ``` bash
 $ ifconfig
 ```
-![проверка адреса](./assets/12.png)
+![проверка адреса](./assets/11.png)
 
 > Проверяем успешноли пропингуются удаленные хосты 1.1.1.1 и ya.ru
 ``` bash
 $ ping 1.1.1.1
 $ ping ya.ru
 ```
-![пингуем 1.1.1.1 ya.ru](./assets/13.png)
+![пингуем 1.1.1.1 ya.ru](./assets/11.png)
 
 ## Обновление ОС
 
@@ -128,7 +127,7 @@ $ ping ya.ru
 $ sudo apt update
 ```
 
-![Обновление ОС](./assets/14.png)
+![Обновление ОС](./assets/12.png)
 
 ## Использование команды sudo
 
@@ -139,8 +138,8 @@ $ sudo apt update
 $ sudo usermod -a -G sudo user-1
 $ su user-1
 $ cat /etc/hostname
-$ sudo hostname deltajed-server-2
-$ su deltajed
+$ sudo hostname user-2
+$ su sullustg
 ```
 ![Выдача прав новому пользователю](./assets/15.png)
 
@@ -165,9 +164,6 @@ $ sudo apt install mcedit
 3. Используя каждый из трех выбранных редакторов, откройте файл на редактирование, отредактируйте файл, заменив никнейм на строку "21 School 21", закройте файл без сохранения изменений.
 4. Используя каждый из трех выбранных редакторов, отредактируйте файл ещё раз (по аналогии с предыдущим пунктом), а затем освойте функции поиска по содержимому файла (слово) и замены слова на любое другое.
 
-> Все файлы.
-1. ![Все файлы](./assets/17.png)
-
 ### VIM
 > vim test_vim.txt \
 > Режим редактирования `i` \
@@ -177,15 +173,13 @@ $ sudo apt install mcedit
 > Поиск: `/<Что хотим найти>` \
 > Замена: `:s/<ЧТО>/<НА ЧТО>`
 
-1. ![VIM](./assets/18.png)
+1. ![VIM](./assets/17.png)
 
-2. ![VIM](./assets/19.png)
+2. ![VIM](./assets/20.png)
 
-3. ![VIM](./assets/20.png)
+3. ![VIM](./assets/23.png)
 
-4. ![VIM](./assets/21.png)
-
-5. ![VIM](./assets/22.png)
+4. ![VIM](./assets/24.png)
 
 ### NANO
 
@@ -196,15 +190,14 @@ $ sudo apt install mcedit
 > Для перехода к следующему совпадению `ALT + W`, для прекращения поиска `ALT + C`. \
 > Замена: `CTRL + \` + `<ЧТО + ENTER>` + `<НА ЧТО + ENTER>` - `A` - ALL || `Y` - YES || `N` - NO
 
-1. ![NANO](./assets/23.png)
+1. ![NANO](./assets/18.png)
 
-2. ![NANO](./assets/24.png)
+2. ![NANO](./assets/21.png)
 
 3. ![NANO](./assets/25.png)
 
 4. ![NANO](./assets/26.png)
 
-5. ![NANO](./assets/27.png)
 
 
 ### MCEDIT
@@ -215,19 +208,13 @@ $ sudo apt install mcedit
 > Поиск: `F7` + <Что ищем> + `<OK> || <FIND ALL>` \
 > Замена: `F4` + <ЧТО> + <НА ЧТО> + `<REPLACE> || <ALL> || <SKIP>`
 
-1. ![MCEDIT](./assets/28.png)
+1. ![MCEDIT](./assets/19.png)
 
-2. ![MCEDIT](./assets/29.png)
+2. ![MCEDIT](./assets/22.png)
 
-3. ![MCEDIT](./assets/30.png)
+3. ![MCEDIT](./assets/27.png)
 
-4. ![MCEDIT](./assets/31.png)
-
-5. ![MCEDIT](./assets/32.png)
-
-6. ![MCEDIT](./assets/33.png)
-
-7. ![MCEDIT](./assets/34.png)
+4. ![MCEDIT](./assets/28.png)
 
 ## Установка и базовая настройка сервиса SSHD
 
