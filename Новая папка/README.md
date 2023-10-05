@@ -104,8 +104,6 @@ $ sudo vim /etc/netplan/00-installer-config.yaml
 $ sudo netplan apply
 $ reboot
 ```
-![применение настроек](./assets/11.png)
-
 > Проверяем, что адреса соотсветствуют заданным в предыдущем пункте.
 ``` bash
 $ ifconfig
@@ -224,7 +222,7 @@ $ sudo apt install mcedit
 $ sudo apt-get install ssh
 $ sudo apt install openssh-server
 ```
-![SSHD](./assets/35.png)
+![SSHD](./assets/30.png)
 
 2. Добавить автостарт службы при загрузке системы.
 
@@ -233,14 +231,14 @@ $ sudo systemctl enable ssh
 $ systemctl status ssh
 ```
 
-![SSH ENABLE](./assets/36.png)
+![SSH ENABLE](./assets/31.png)
 
 3. Перенастроить службу SSHd на порт 2022.
 ``` bash
 $ sudo vim /etc/ssh/sshd_config
 $ systemctl restart sshd
 ```
-![SSHd](./assets/37.png)
+![SSHd](./assets/32.png)
 
 4. Используя команду ps, показать наличие процесса sshd. Для этого к команде нужно подобрать ключи.
 
@@ -258,7 +256,7 @@ $ systemctl restart sshd
 ``` bash 
 $ ps -e | grep sshd
 ```
-![ps](./assets/38.png)
+![ps](./assets/33.png)
 
 5. Перезагрузить систему.
 
@@ -267,7 +265,7 @@ $ service ssh restart
 $ reboot
 $ netstat -tan 
 ```
-![netstat](./assets/39.png)
+![netstat](./assets/34.png)
 
 - `-t (--tcp)` отображает соедниеня только по tcp
 - `-a (--all)` вывод всех активных подключений TCP
@@ -290,35 +288,35 @@ $ htop
 ```
 
 1. По выводу команды top определить и написать в отчёте:
-* uptime - 49min;
+* uptime - 7.45min;
 * количество авторизованных пользователей - 1;
 * общая загрузку системы - 0.00, 0.00, 0.00;
-* общее количество процессов - 120;
-* загрузку cpu - 0.7%;
-* загрузку памяти - 183M/3.84G;
-* pid процесса занимающего больше всего памяти - 828 (top -o %MEM);
-* pid процесса, занимающего больше всего процессорного времени - 1875 (top -o %CPU);
+* общее количество процессов - 25;
+* загрузку cpu - 0.0%;
+* загрузку памяти - 140M/1.93G;
+* pid процесса занимающего больше всего памяти - 355 (top -o %MEM);
+* pid процесса, занимающего больше всего процессорного времени - 1 (top -o %CPU);
 
-![htop](./assets/40.png)
+![htop](./assets/35.png)
 
 2. В отчёт вставить скрин с выводом команды htop:
 отсортированному по `PID`, `PERCENT_CPU`, `PERCENT_MEM`, `TIME`.
 
 ### SORT BY PID
-![PID](./assets/41.png)
+![PID](./assets/36.png)
 ### SORT BY PERCENT_CPU
-![PERCENT_CPU](./assets/42.png)
+![PERCENT_CPU](./assets/37.png)
 ### SORT BY PERCENT_MEM
-![PERCENT_MEM](./assets/43.png)
+![PERCENT_MEM](./assets/38.png)
 ### SORT BY TIME
-![TIME](./assets/44.png)
+![TIME](./assets/39.png)
 
 ### FILTER 'sshd'
-![FILTER sshd](./assets/45.png)
+![FILTER sshd](./assets/40.png)
 ### SEARCH 'syslog'
-![SEARCH syslog](./assets/46.png)
+![SEARCH syslog](./assets/41.png)
 ### C добавленным выводом hostname, clock и uptime
-![htop hostname](./assets/47.png)
+![htop hostname](./assets/42.png)
 
 ## Использование утилиты fdisk
 
@@ -327,12 +325,12 @@ $ sudo fdisk -l
 $ sudo 
 ```
 > Название диска: VBOX HARDDISK \
-> Размер: 15 GiB \
-> Количество секторов: 31457280 \
-> Размер swap: 2G 
+> Размер: 10 GiB \
+> Количество секторов: 20971520 \
+> Размер swap: 1.5G 
 
 
-![fdisk](./assets/48.png)
+![fdisk](./assets/43.png)
 
 > Если у вас нет файла подкачки.
 ``` bash 
@@ -344,7 +342,7 @@ $ sudo mkswap /swapfile
 $ sudo swapon /swapfile
 $ swapon --show || free -h
 ```
-![swap](./assets/49.png)
+![swap](./assets/44.png)
 
 ## Использование утилиты df
 
@@ -352,42 +350,42 @@ $ swapon --show || free -h
 ``` bash 
 $ df
 ```
-* Размер раздела - 10218772;
-* Размер занятого пространства - 4816036;
-* Размер свободного пространства - 4862064;
-* Процент использования - 50%;
+* Размер раздела - 8408452;
+* Размер занятого пространства - 4214384;
+* Размер свободного пространства - 3745352;
+* Процент использования - 53%;
 * Единица измерения в выводе - килобайт.
 
-![df](./assets/50.png)
+![df](./assets/45.png)
 
 2. `df -Th` для корневого раздела (/):
 ``` bash 
 $ df -Th
 ```
-* Размер раздела - 9.8G;
-* Рразмер занятого пространства - 4.6G;
-* Размер свободного пространства - 4.7G;
-* Процент использования - 50%
+* Размер раздела - 8.1G;
+* Рразмер занятого пространства - 4.1G;
+* Размер свободного пространства - 3.6G;
+* Процент использования - 53%
 * Тип файловой системы для раздела - ext4.
 
-![df -Th](./assets/51.png)
+![df -Th](./assets/46.png)
 
 ## Использование утилиты du
 1. Вывести размер папок `/home`, `/var`, `/var/log` (в человекочитаемом виде)
 ``` bash 
 $ sudo du -sh /var/log /var /home  
 ```
-![du -sh](./assets/52.png)
+![du -sh](./assets/47.png)
 2. Вывести размер папок `/home`, `/var`, `/var/log` (в байтах) 
 ``` bash 
 $ sudo du -s --block-size=1 /var/log /var /home  
 ```
-![du -s](./assets/53.png)
+![du -s](./assets/48.png)
 3. Вывести размер всего содержимого в `/var/log` (не общее, а каждого вложенного элемента, используя `*`)
 ``` bash 
 $ sudo du -sh /var/log/*  
 ```
-![du -sh *](./assets/54.png)
+![du -sh *](./assets/49.png)
 
 ## Установка и использование утилиты ncdu
 
@@ -395,18 +393,18 @@ $ sudo du -sh /var/log/*
 $ sudo apt install ncdu
 $ sudo ncdu
 ```
-![ncdu](./assets/55.png)
+![ncdu](./assets/50.png)
 
 - Вывести размер папок `/home`, `/var`, `/var/log`.
 
 ### `/home`
-![ncdu /home](./assets/56.png)
+![ncdu /home](./assets/51.png)
 
 ### `/var`
-![ncdu /var](./assets/57.png)
+![ncdu /var](./assets/52.png)
 
 ### `/var/log`
-![ncdu /var/log](./assets/58.png)
+![ncdu /var/log](./assets/53.png)
 
 ## Работа с системными журналами
 
@@ -417,23 +415,23 @@ $ sudo ncdu
 ``` bash 
 $ sudo vim /var/log/dmesg
 ```
-![sudo vim /var/log/dmesg](./assets/59.png)
+![sudo vim /var/log/dmesg](./assets/54.png)
 2. `/var/log/syslog`
 
 ``` bash 
 $ sudo vim /var/log/syslog
 ```
-![sudo vim /var/log/syslog](./assets/60.png)
+![sudo vim /var/log/syslog](./assets/55.png)
 
 3. `/var/log/auth.log`
 
 ``` bash 
 $ sudo vim /var/log/auth.log
 ```
-![sudo vim /var/log/auth.log](./assets/61.png)
+![sudo vim /var/log/auth.log](./assets/56.png)
 
-* Последняя успешная авторизация: Mar 5 21:18:11;
-* Имя пользователя: deltajed;
+* Последняя успешная авторизация: Oct 5 14:22:57;
+* Имя пользователя: sullustg;
 * Метод входа в систему: pam-unix.
 
 4. `Перезапустить службу SSHd.`
@@ -441,7 +439,7 @@ $ sudo vim /var/log/auth.log
 ``` bash 
 $ sudo systemctl restart ssh
 ```
-![restart ssh](./assets/62.png)
+![restart ssh](./assets/57.png)
 
 
 ## Использование планировщика заданий CRON
@@ -449,25 +447,24 @@ $ sudo systemctl restart ssh
 ``` bash 
 $ sudo crtontab -e
 ```
-![crtontab -e](./assets/63.png)
+![crtontab -e](./assets/58.png)
 
 1. Используя планировщик заданий, запустим команду uptime через каждые 2 минуты.
 
 ``` vim 
 */2 * * * * uptime
 ```
-![new crtontab](./assets/64.png)
 
 2. Найти в системных журналах строчки (минимум две в заданном временном диапазоне) о выполнении.
 
-![log cron](./assets/65.png)
+![log cron](./assets/59.png)
 
 3. Вывести на экран список текущих заданий для CRON.
 
 ``` bash 
 $ sudo crtontab -l
 ```
-![log cron](./assets/66.png)
+![log cron](./assets/60.png)
 
 4. Удалить все задания из планировщика заданий.
 
@@ -475,4 +472,4 @@ $ sudo crtontab -l
 $ sudo crtontab -r
 $ sudo crtontab -l
 ```
-![del cron](./assets/67.png)
+![del cron](./assets/61.png)
