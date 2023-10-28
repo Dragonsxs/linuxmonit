@@ -320,7 +320,7 @@ $ sudo vim /etc/firewall.sh
 ``` shell
 $ sudo apt-get install nmap
 ```
-![iptables](./linux_net/18.png)
+![iptables](./linux_net/Untitled%2044.png)
 
 ## 5. [Статическая маршрутизация сети](#5-статическая-маршрутизация-сети)
 
