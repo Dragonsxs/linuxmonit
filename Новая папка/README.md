@@ -46,21 +46,21 @@ $ ipcalc 192.167.38.54/13 | grep Network
 ``` shell
 $ ipcalc 255.255.255.0 | grep Netmask
 ```
-![ipcalc](./assets/2.png)
+![ipcalc(./linux_net/2.png)
 
 > /15 в обычную и двоичную
 
 ``` shell
 $ ipcalc 0.0.0.0/15 | grep Netmask
 ```
-![ipcalc](./assets/3.png)
+![ipcalc](./linux_net/3.png)
 
 > 11111111.11111111.11111111.11110000 в обычную и префиксную
 
 ``` shell
 $ ipcalc 0.0.0.0/28 | grep Netmask
 ```
-![ipcalc](./assets/4.png)
+![ipcalc](./linux_net/4.png)
 
 3. Минимальный и максимальный хост в сети 12.167.38.4 при масках: /8, 11111111.11111111.00000000.00000000, 255.255.254.0 и /4
 
@@ -69,7 +69,7 @@ $ ipcalc 0.0.0.0/28 | grep Netmask
 ``` shell
 $ ipcalc 12.167.38.4/8
 ```
-![ipcalc](./assets/5.png)
+![ipcalc](./linux_net/5.png)
 
 > Минимальный и максимальный хост в сети 12.167.38.4 при маске 11111111.11111111.00000000.00000000
 
@@ -77,7 +77,7 @@ $ ipcalc 12.167.38.4/8
 $ ipcalc 12.167.38.4/16
 ```
 
-![ipcalc](./assets/6.png)
+![ipcalc](./linux_net/6.png)
 
 > Минимальный и максимальный хост в сети 12.167.38.4 при маске 255.255.254.0
 
@@ -85,7 +85,7 @@ $ ipcalc 12.167.38.4/16
 $ ipcalc 12.167.38.4/23
 ```
 
-![ipcalc](./assets/7.png)
+![ipcalc](./linux_net/7.png)
 
 > Минимальный и максимальный хост в сети 12.167.38.4 при маске /4
 
@@ -93,7 +93,7 @@ $ ipcalc 12.167.38.4/23
 $ ipcalc 12.167.38.4/4
 ```
 
-![ipcalc](./assets/8.png)
+![ipcalc](./linux_net/8.png)
 
 ### 1.2. [localhost](#12-localhost)
 
@@ -150,7 +150,7 @@ $ ipcalc 12.167.38.4/4
 > Поднимем две виртуальные машины (далее -- `ws1` и `ws2`) \
 > С помощью команды `ip a` посмотрим существующие сетевые интерфейсы
 
-![ws](./assets/9.png)
+![ws](./linux_net/9.png)
 
 ``` shell
 $ ifconfig -a
@@ -187,7 +187,7 @@ $ sudo vim /etc/netplan/00-installer-config.yaml
 $ sudo netplan apply
 ```
 
-![ws1-ws2](./assets/10.png)
+![ws1-ws2](./linux_net/10.png)
 
 ### 2.1. [Добавление статического маршрута вручную](#21-добавление-статического-маршрута-вручную)
 
@@ -215,7 +215,7 @@ $ sudo ping -c 172.24.116.8
 $ sudo ping -c 192.168.100.10
 ```
 
-![connect](./assets/11.png)
+![connect](./linux_net/11.png)
 
 ### 2.2. [Добавление статического маршрута с сохранением](#22-добавление-статического-маршрута-с-сохранением)
 
@@ -231,7 +231,7 @@ $ sudo netplan apply
 $ sudo vim /etc/netplan/00-installer-config.yaml
 ```
 
-![route](./assets/12.png)
+![route](./linux_net/12.png)
 
 > Пропинговать соединение между машинами
 
@@ -244,7 +244,7 @@ $ sudo ping -c 172.24.116.8
 ``` shell
 $ sudo ping -c 192.168.100.10
 ```
-![route](./assets/13.png)
+![route](./linux_net/13.png)
 
 
 ## 3. [Утилита iperf3](#3-утилита-iperf3)
@@ -277,7 +277,7 @@ $ iperf3 -s -f K
 $ iperf3 -c 192.168.100.10 -f K
 ```
 
-![Скорость ws1<->ws2](./assets/14.png)
+![Скорость ws1<->ws2](./linux_net/14.png)
 
 ## 4. [Сетевой экран](#4-сетевой-экран)
 
@@ -298,15 +298,15 @@ $ sudo apt-get install iptables
 $ sudo vim /etc/firewall.sh
 ```
 
-![iptables](./assets/15.png)
+![iptables](./linux_net/15.png)
 
 > Запустить файлы на обеих машинах командами `chmod +x /etc/firewall.sh` и `sh /etc/firewall.sh`
 
-![iptables](./assets/16.png)
+![iptables](./linux_net/16.png)
 
 > Правила выполняться сверху-вниз, следовательно, если правило запрета находиться выше оно срабатывает, а правило разрешения находящиеся ниже нет. Следовательно 1ая машина не пингуется, а 2ая пингуется.
 :
-![iptables](./assets/17.png)
+![iptables](./linux_net/17.png)
 
 ### 4.2. [Утилита nmap](#42-утилита-nmap)
 
@@ -314,24 +314,24 @@ $ sudo vim /etc/firewall.sh
 ``` shell
 $ sudo apt-get install nmap
 ```
-![iptables](./assets/18.png)
+![iptables](./linux_net/18.png)
 
 ## 5. [Статическая маршрутизация сети](#5-статическая-маршрутизация-сети)
 
 > Поднять пять виртуальных машин (3 рабочие станции (ws11, ws21, ws22) и 2 роутера (r1, r2));
 `Сеть`
-![сеть](./assets/19.png)
+![сеть](./linux_net/19.png)
 
 ### 5.1. [Настройка адресов машин](#51-настройка-адресов-машин)
 > Настроить конфигурации машин в etc/netplan/00-installer-config.yaml согласно сети на рисунке.
 ``` shell
 $ sudo vim /etc/netplan/00-installer-config.yaml
 ```
-![сеть](./assets/20.png)
-![сеть](./assets/21.png)
-![сеть](./assets/22.png)
-![сеть](./assets/23.png)
-![сеть](./assets/24.png)
+![сеть](./linux_net/20.png)
+![сеть](./linux_net/21.png)
+![сеть](./linux_net/22.png)
+![сеть](./linux_net/23.png)
+![сеть](./linux_net/24.png)
 > Перезапустить сервис сети;
 ``` shell
 $ sudo netplan apply
@@ -340,19 +340,19 @@ $ sudo netplan apply
 ``` shell 
 $ ip -4 a
 ```
-![сеть](./assets/25.png)
+![сеть](./linux_net/25.png)
 
 > Также пропинговать ws22 с ws21; 
 ``` shell 
 $ ping -c 5 10.20.0.20
 ```
-![сеть](./assets/26.png)
+![сеть](./linux_net/26.png)
 
 > Аналогично пропинговать r1 с ws11.
 ``` shell 
 $ ping -c 5 10.10.0.1
 ```
-![сеть](./assets/27.png)
+![сеть](./linux_net/27.png)
 
 ### 5.2 [Включение переадресации IP-адресов](#52-включение-переадресации-ip-адресов)
 
@@ -362,15 +362,15 @@ $ ping -c 5 10.10.0.1
 $ sudo sysctl -w net.ipv4.ip_forward=1
 ```
 
-![переадресация](./assets/28.png)
+![переадресация](./linux_net/28.png)
 
 > `r1`
 
-![переадресация](./assets/29.png)
+![переадресация](./linux_net/29.png)
 
 > `r2`
 
-![переадресация](./assets/30.png)
+![переадресация](./linux_net/30.png)
 
 ``` shell 
 $ sudo sysctl -p
@@ -384,31 +384,31 @@ $ sudo sysctl -p
 $ sudo vim /etc/netplan/00-installer-config.yaml
 ```
 
-![по-умолчанию](./assets/31_1.png)
+![по-умолчанию](./linux_net/31_1.png)
 
 ``` shell 
 $ ip r
 ```
-![по-умолчанию](./assets/32.png)
+![по-умолчанию](./linux_net/32.png)
 
 > Пропинговать с ws11 роутер r2 и показать на r2, что пинг доходит. Для этого использовать команду:
 ``` shell 
 $ sudo tcpdump -tn -i enp0s3
 ```
 
-![tcpdump](./assets/33_1.png)
+![tcpdump](./linux_net/33_1.png)
 
 ### 5.4. [Добавление статических маршрутов](#54-добавление-статических-маршрутов)
 
 > Добавить в роутеры `r1` и `r2` статические маршруты в файле конфигураций;
 
-![статические маршруты](./assets/34.png)
+![статические маршруты](./linux_net/34.png)
 
 > Вызвать ip r и показать таблицы с маршрутами на обоих роутерах. Пример таблицы на r1:
 ``` shell 
 $ ip r
 ```
-![статические маршруты](./assets/35.png)
+![статические маршруты](./linux_net/35.png)
 
 > Запустить команды на ws11:
 
@@ -417,7 +417,7 @@ $ ip r list 10.10.0.0/18
 $ ip r list 0.0.0.0/0
 ```
 
-![list](./assets/36.png)
+![list](./linux_net/36.png)
 
 > Для адреса 10.10.0.0/18 был выбран маршрут, отличный от 0.0.0.0/0, поскольку он является адресом сети и доступен без шлюза.
 
@@ -434,12 +434,12 @@ $ tcpdump -tnv -i eth0
 ``` shell 
 $ sudo traceroute 10.20.0.10 -n
 ```
-![ICMP](./assets/37.png)
+![ICMP](./linux_net/37.png)
 > `r1`
 ``` shell 
 $ sudo tcpdump -tnv -i eth0
 ```
-![traceroute](./assets/38.png)
+![traceroute](./linux_net/38.png)
 
 > Каждый пакет проходит на своем пути определенное количество узлов, пока достигнет своей цели. Причем, каждый пакет имеет свое время жизни. Это количество узлов, которые может пройти пакет перед тем, как он будет уничтожен. Этот параметр записывается в заголовке TTL, каждый маршрутизатор, через который будет проходить пакет уменьшает его на единицу. При TTL=0 пакет уничтожается, а отправителю отсылается сообщение Time Exceeded. \
 > Команда traceroute linux использует UDP пакеты. Она отправляет пакет с TTL=1 и смотрит адрес ответившего узла, дальше TTL=2, TTL=3 и так пока не достигнет цели. Каждый раз отправляется по три пакета и для каждого из них измеряется время прохождения. Пакет отправляется на случайный порт, который, скорее всего, не занят. Когда утилита traceroute получает сообщение от целевого узла о том, что порт недоступен трассировка считается завершенной.
@@ -451,12 +451,12 @@ $ sudo tcpdump -tnv -i eth0
 ``` shell
 $ sudo tcpdump -n -i eth0 icmp
 ```
-![tcpdump](./assets/39.png)
+![tcpdump](./linux_net/39.png)
 > Пропинговать с ws11 несуществующий IP (например, 10.30.0.111) с помощью команды:
 ``` shell
 $ ping -c 1 10.30.0.111
 ```
-![tcpdump](./assets/40.png)
+![tcpdump](./linux_net/40.png)
 
 ## 6. [Динамическая настройка IP с помощью DHCP](#6-динамическая-настройка-ip-с-помощью-dhcp)
 
@@ -464,11 +464,11 @@ $ ping -c 1 10.30.0.111
 
 1. Указать адрес маршрутизатора по-умолчанию, DNS-сервер и адрес внутренней сети.
 
-![dns](./assets/41.png)
+![dns](./linux_net/41.png)
 
 2. В файле `resolv.conf` прописать nameserver 8.8.8.8:
 
-![resolv.conf](./assets/42.png)
+![resolv.conf](./linux_net/42.png)
 
 Перезагрузить службу DHCP командой systemctl restart isc-dhcp-server. Машину ws21 перезагрузить при помощи reboot и через ip a показать, что она получила адрес. Также пропинговать ws22 с ws21.
 
@@ -476,24 +476,24 @@ $ ping -c 1 10.30.0.111
 ``` shell 
 $ systemctl restart isc-dhcp-server
 ```
-![isc-dhcp-server](./assets/43.png)
+![isc-dhcp-server](./linux_net/43.png)
 
 > Для `ws21`
 ``` shell 
 $ reboot
 $ ip a
 ```
-![isc-dhcp-server](./assets/44.png)
+![isc-dhcp-server](./linux_net/44.png)
 
 > Указать MAC адрес у ws11, для этого в `etc/netplan/00-installer-config.yaml` надо добавить строки: `macaddress`: 10:10:10:10:10:BA, `dhcp4`: true
 
-![isc-dhcp-server](./assets/45.png)
+![isc-dhcp-server](./linux_net/45.png)
 
 > Для `r1` настроить аналогично `r2`, но сделать выдачу адресов с жесткой привязкой к MAC-адресу (ws11). Провести аналогичные тесты В файле `/etc/dhcp/dhcpd.conf` настроить конфигурацию службы DHCP с жесткой привязкой к MAC-адресу (ws11)
 
-![isc-dhcp-server](./assets/46.png)
+![isc-dhcp-server](./linux_net/46.png)
 
-![isc-dhcp-server](./assets/47.png)
+![isc-dhcp-server](./linux_net/47.png)
 
 > Перезагрузить службу DHCP командой systemctl restart isc-dhcp-server. \
 > Машину ws11 перезагрузить при помощи reboot и через ip a показать, что она получила адрес.
@@ -503,11 +503,11 @@ $ ip a
 $ systemctl restart isc-dhcp-server
 ```
 
-![isc-dhcp-server](./assets/48.png)
+![isc-dhcp-server](./linux_net/48.png)
 ``` shell 
 $ ip a
 ```
-![isc-dhcp-server](./assets/49.png)
+![isc-dhcp-server](./linux_net/49.png)
 
 > Обновление адреса для машины ws21 при помощи запроса его у dhcp сервера при помощи команды; 
 
@@ -517,9 +517,9 @@ $ sudo dhclient enp0s3
 ```
 
 `ДО`
-![isc-dhcp-server](./assets/50.png)
+![isc-dhcp-server](./linux_net/50.png)
 `ПОСЛЕ`
-![isc-dhcp-server](./assets/51.png)
+![isc-dhcp-server](./linux_net/51.png)
 
 ## 7. [NAT](#7-nat)
 
@@ -529,12 +529,12 @@ $ sudo dhclient enp0s3
 $ sudo apt install apache2
 ```
 
-![NAT](./assets/52.png)
-![NAT](./assets/53.png)
+![NAT](./linux_net/52.png)
+![NAT](./linux_net/53.png)
 
 > Запустить веб-сервер Apache командой service apache2 start на ws22 и r1;
 
-![NAT](./assets/54.png)
+![NAT](./linux_net/54.png)
 
 > Добавить в фаервол, созданный по аналогии с фаерволом из [Части 4](#4-сетевой-экран), на r2 следующие правила:
 
@@ -542,7 +542,7 @@ $ sudo apt install apache2
 2. Удаление правил в таблице "NAT" - iptables -F -t nat
 3. Отбрасывать все маршрутизируемые пакеты - iptables --policy FORWARD DROP
 
-![NAT](./assets/55.png)
+![NAT](./linux_net/55.png)
 
 ``` shell
 $ sudo chmod +x /etc/firewall.sh
@@ -554,52 +554,52 @@ $ sudo sh /etc/firewall.sh
 ``` shell
 $ ping -c 3 10.100.0.11
 ```
-![NAT](./assets/56.png)
+![NAT](./linux_net/56.png)
 
 > Добавить в файл ещё одно правило:
 
 - Разрешить маршрутизацию всех пакетов протокола ICMP;
 
-![ICMP](./assets/57.png)
+![ICMP](./linux_net/57.png)
 
 > Проверить соединение между `ws22` и `r1` командой `ping`
 
 ``` shell
 $ ping 10.100.0.11
 ```
-![ICMP](./assets/58.png)
+![ICMP](./linux_net/58.png)
 
 > Добавить в файл ещё два правила:
 
 > Включить SNAT, а именно маскирование всех локальных ip из локальной сети, находящейся за r2 (по обозначениям из Части 5 - сеть 10.20.0.0) \
 > Включить DNAT на 8080 порт машины r2 и добавить к веб-серверу Apache, запущенному на ws22, доступ извне сети
 
-![SNAT](./assets/59.png)
+![SNAT](./linux_net/59.png)
 
 > Проверить соединение по TCP для SNAT, для этого с ws22 подключиться к серверу Apache на r1. \
 > Проверить соединение по TCP для DNAT, для этого с r1 подключиться к серверу Apache на ws22 командой `telnet`
 
-![SNAT](./assets/60.png)
+![SNAT](./linux_net/60.png)
 
 ## 8. [Знакомство с SSH Tunnels](#8-знакомство-с-ssh-tunnels)
 
 > Запустить веб-сервер Apache на ws22 только на localhost (то есть в файле `/etc/apache2/ports.conf` изменить строку Listen 80 на Listen localhost:80);
 
-![SSH](./assets/61.png)
+![SSH](./linux_net/61.png)
 
 > Воспользоваться Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21 Воспользоваться Remote TCP forwarding c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11;
 
-![SSH](./assets/62.png)
+![SSH](./linux_net/62.png)
 
 > Воспользоваться Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21;
 
-![Local TCP](./assets/63.png)
+![Local TCP](./linux_net/63.png)
 
 > Воспользоваться Remote TCP forwarding c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11;
 
-![Remote TCP](./assets/64.png)
+![Remote TCP](./linux_net/64.png)
 
 > Для проверки, сработало ли подключение в обоих предыдущих пунктах, перейдите во второй терминал (например, клавишами Alt + F2) и выполните команду:
 
-![Remote TCP](./assets/65.png)
-![Remote TCP](./assets/66.png)
+![Remote TCP](./linux_net/65.png)
+![Remote TCP](./linux_net/66.png)
