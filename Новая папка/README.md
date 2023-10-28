@@ -46,7 +46,7 @@ $ ipcalc 192.167.38.54/13 | grep Network
 ``` shell
 $ ipcalc 255.255.255.0 | grep Netmask
 ```
-![ipcalc(./linux_net/2.png)
+![ipcalc](./linux_net/2.png)
 
 > /15 в обычную и двоичную
 
