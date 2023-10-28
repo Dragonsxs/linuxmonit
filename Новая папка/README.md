@@ -415,13 +415,14 @@ $ sudo tcpdump -tn -i enp0s3
 
 > Добавить в роутеры `r1` и `r2` статические маршруты в файле конфигураций;
 
-![статические маршруты](./linux_net/34.png)
+![статические маршруты](./linux_net/Untitled%2069.png)
+![статические маршруты](./linux_net/Untitled%2070.png)
 
 > Вызвать ip r и показать таблицы с маршрутами на обоих роутерах. Пример таблицы на r1:
 ``` shell 
 $ ip r
 ```
-![статические маршруты](./linux_net/35.png)
+![статические маршруты](./linux_net/Untitled%2073.png)
 
 > Запустить команды на ws11:
 
@@ -430,7 +431,7 @@ $ ip r list 10.10.0.0/18
 $ ip r list 0.0.0.0/0
 ```
 
-![list](./linux_net/36.png)
+![статические маршруты](./linux_net/Untitled%2074.png)
 
 > Для адреса 10.10.0.0/18 был выбран маршрут, отличный от 0.0.0.0/0, поскольку он является адресом сети и доступен без шлюза.
 
@@ -447,12 +448,13 @@ $ tcpdump -tnv -i eth0
 ``` shell 
 $ sudo traceroute 10.20.0.10 -n
 ```
-![ICMP](./linux_net/37.png)
+![ICMP](./linux_net/Untitled%2077.png)
 > `r1`
 ``` shell 
 $ sudo tcpdump -tnv -i eth0
 ```
-![traceroute](./linux_net/38.png)
+![ICMP](./linux_net/Untitled%2078.png)
+![ICMP](./linux_net/Untitled%2079.png)
 
 > Каждый пакет проходит на своем пути определенное количество узлов, пока достигнет своей цели. Причем, каждый пакет имеет свое время жизни. Это количество узлов, которые может пройти пакет перед тем, как он будет уничтожен. Этот параметр записывается в заголовке TTL, каждый маршрутизатор, через который будет проходить пакет уменьшает его на единицу. При TTL=0 пакет уничтожается, а отправителю отсылается сообщение Time Exceeded. \
 > Команда traceroute linux использует UDP пакеты. Она отправляет пакет с TTL=1 и смотрит адрес ответившего узла, дальше TTL=2, TTL=3 и так пока не достигнет цели. Каждый раз отправляется по три пакета и для каждого из них измеряется время прохождения. Пакет отправляется на случайный порт, который, скорее всего, не занят. Когда утилита traceroute получает сообщение от целевого узла о том, что порт недоступен трассировка считается завершенной.
@@ -464,12 +466,11 @@ $ sudo tcpdump -tnv -i eth0
 ``` shell
 $ sudo tcpdump -n -i eth0 icmp
 ```
-![tcpdump](./linux_net/39.png)
 > Пропинговать с ws11 несуществующий IP (например, 10.30.0.111) с помощью команды:
 ``` shell
 $ ping -c 1 10.30.0.111
 ```
-![tcpdump](./linux_net/40.png)
+![ICMP](./linux_net/Untitled%2080.png)
 
 ## 6. [Динамическая настройка IP с помощью DHCP](#6-динамическая-настройка-ip-с-помощью-dhcp)
 
@@ -477,11 +478,11 @@ $ ping -c 1 10.30.0.111
 
 1. Указать адрес маршрутизатора по-умолчанию, DNS-сервер и адрес внутренней сети.
 
-![dns](./linux_net/41.png)
+![dns](./linux_net/Untitled%2081.png)
 
 2. В файле `resolv.conf` прописать nameserver 8.8.8.8:
 
-![resolv.conf](./linux_net/42.png)
+![dns](./linux_net/Untitled%2082.png)
 
 Перезагрузить службу DHCP командой systemctl restart isc-dhcp-server. Машину ws21 перезагрузить при помощи reboot и через ip a показать, что она получила адрес. Также пропинговать ws22 с ws21.
 
@@ -489,24 +490,24 @@ $ ping -c 1 10.30.0.111
 ``` shell 
 $ systemctl restart isc-dhcp-server
 ```
-![isc-dhcp-server](./linux_net/43.png)
+![ICMP](./linux_net/Untitled%2083.png)
 
 > Для `ws21`
 ``` shell 
 $ reboot
 $ ip a
 ```
-![isc-dhcp-server](./linux_net/44.png)
+![ICMP](./linux_net/Untitled%2084.png)
 
 > Указать MAC адрес у ws11, для этого в `etc/netplan/00-installer-config.yaml` надо добавить строки: `macaddress`: 10:10:10:10:10:BA, `dhcp4`: true
 
-![isc-dhcp-server](./linux_net/45.png)
+![ICMP](./linux_net/Untitled%2085.png)
 
 > Для `r1` настроить аналогично `r2`, но сделать выдачу адресов с жесткой привязкой к MAC-адресу (ws11). Провести аналогичные тесты В файле `/etc/dhcp/dhcpd.conf` настроить конфигурацию службы DHCP с жесткой привязкой к MAC-адресу (ws11)
 
-![isc-dhcp-server](./linux_net/46.png)
+![ICMP](./linux_net/Untitled%2086.png)
 
-![isc-dhcp-server](./linux_net/47.png)
+![ICMP](./linux_net/Untitled%2087.png)
 
 > Перезагрузить службу DHCP командой systemctl restart isc-dhcp-server. \
 > Машину ws11 перезагрузить при помощи reboot и через ip a показать, что она получила адрес.
@@ -516,11 +517,11 @@ $ ip a
 $ systemctl restart isc-dhcp-server
 ```
 
-![isc-dhcp-server](./linux_net/48.png)
+![ICMP](./linux_net/Untitled%2088.png)
 ``` shell 
 $ ip a
 ```
-![isc-dhcp-server](./linux_net/49.png)
+![ICMP](./linux_net/Untitled%2089.png)
 
 > Обновление адреса для машины ws21 при помощи запроса его у dhcp сервера при помощи команды; 
 
@@ -530,9 +531,9 @@ $ sudo dhclient enp0s3
 ```
 
 `ДО`
-![isc-dhcp-server](./linux_net/50.png)
+![ICMP](./linux_net/Untitled%2090.png)
 `ПОСЛЕ`
-![isc-dhcp-server](./linux_net/51.png)
+![ICMP](./linux_net/Untitled%2091.png)
 
 ## 7. [NAT](#7-nat)
 
@@ -542,12 +543,11 @@ $ sudo dhclient enp0s3
 $ sudo apt install apache2
 ```
 
-![NAT](./linux_net/52.png)
-![NAT](./linux_net/53.png)
+![ICMP](./linux_net/Untitled%2092.png)
 
 > Запустить веб-сервер Apache командой service apache2 start на ws22 и r1;
 
-![NAT](./linux_net/54.png)
+![ICMP](./linux_net/Untitled%2093.png)
 
 > Добавить в фаервол, созданный по аналогии с фаерволом из [Части 4](#4-сетевой-экран), на r2 следующие правила:
 
@@ -555,7 +555,7 @@ $ sudo apt install apache2
 2. Удаление правил в таблице "NAT" - iptables -F -t nat
 3. Отбрасывать все маршрутизируемые пакеты - iptables --policy FORWARD DROP
 
-![NAT](./linux_net/55.png)
+![NAT](./linux_net/Untitled%2094.png)
 
 ``` shell
 $ sudo chmod +x /etc/firewall.sh
@@ -567,52 +567,54 @@ $ sudo sh /etc/firewall.sh
 ``` shell
 $ ping -c 3 10.100.0.11
 ```
-![NAT](./linux_net/56.png)
+![NAT](./linux_net/Untitled%2095.png)
 
 > Добавить в файл ещё одно правило:
 
 - Разрешить маршрутизацию всех пакетов протокола ICMP;
 
-![ICMP](./linux_net/57.png)
+![ICMP](./linux_net/Untitled%2096.png)
 
 > Проверить соединение между `ws22` и `r1` командой `ping`
 
 ``` shell
 $ ping 10.100.0.11
 ```
-![ICMP](./linux_net/58.png)
+![ICMP](./linux_net/Untitled%2097.png)
 
 > Добавить в файл ещё два правила:
 
 > Включить SNAT, а именно маскирование всех локальных ip из локальной сети, находящейся за r2 (по обозначениям из Части 5 - сеть 10.20.0.0) \
 > Включить DNAT на 8080 порт машины r2 и добавить к веб-серверу Apache, запущенному на ws22, доступ извне сети
 
-![SNAT](./linux_net/59.png)
+![SNAT](./linux_net/Untitled%2098.png)
 
 > Проверить соединение по TCP для SNAT, для этого с ws22 подключиться к серверу Apache на r1. \
 > Проверить соединение по TCP для DNAT, для этого с r1 подключиться к серверу Apache на ws22 командой `telnet`
 
-![SNAT](./linux_net/60.png)
+![SNAT](./linux_net/Untitled%2099.png)
 
 ## 8. [Знакомство с SSH Tunnels](#8-знакомство-с-ssh-tunnels)
 
 > Запустить веб-сервер Apache на ws22 только на localhost (то есть в файле `/etc/apache2/ports.conf` изменить строку Listen 80 на Listen localhost:80);
 
-![SSH](./linux_net/61.png)
+![SSH](./linux_net/Untitled%20100.png)
 
 > Воспользоваться Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21 Воспользоваться Remote TCP forwarding c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11;
 
-![SSH](./linux_net/62.png)
+![SSH](./linux_net/Untitled%20101.png)
 
 > Воспользоваться Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21;
 
-![Local TCP](./linux_net/63.png)
+![Local TCP](./linux_net/Untitled%20102.png)
 
 > Воспользоваться Remote TCP forwarding c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11;
 
-![Remote TCP](./linux_net/64.png)
+![Remote TCP](./linux_net/Untitled%20103.png)
 
 > Для проверки, сработало ли подключение в обоих предыдущих пунктах, перейдите во второй терминал (например, клавишами Alt + F2) и выполните команду:
 
-![Remote TCP](./linux_net/65.png)
-![Remote TCP](./linux_net/66.png)
+![Remote TCP](./linux_net/Untitled%20104.png)
+![Remote TCP](./linux_net/Untitled%20105.png)
+![Remote TCP](./linux_net/Untitled%20106.png)
+![Remote TCP](./linux_net/Untitled%20107.png)
