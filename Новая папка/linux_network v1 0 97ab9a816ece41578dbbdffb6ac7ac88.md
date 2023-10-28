@@ -14,17 +14,17 @@
 
 ### 1) адрес сети *192.167.38.54/13*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled.png)
+![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/1.png)
 
 ### 2) перевод маски *255.255.255.0* в префиксную и двоичную запись, */15* в обычную и двоичную, *11111111.11111111.11111111.11110000* в обычную и префиксную
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%201.png)
+![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/2.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%202.png)
+![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/3.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%203.png)
+![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/4.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%204.png)
+![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/5.png)
 
 ### 3) минимальный и максимальный хост в сети *12.167.38.4* при масках: */8*, *11111111.11111111.00000000.00000000*, *255.255.254.0* и */4*
 
