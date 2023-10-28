@@ -151,6 +151,7 @@ $ ipcalc 12.167.38.4/4
 > С помощью команды `ip a` посмотрим существующие сетевые интерфейсы
 
 ![ws](./linux_net/9.png)
+![ws](./linux_net/10.png)
 
 ``` shell
 $ ifconfig -a
@@ -187,7 +188,8 @@ $ sudo vim /etc/netplan/00-installer-config.yaml
 $ sudo netplan apply
 ```
 
-![ws1-ws2](./linux_net/10.png)
+![ws1-ws2](./linux_net/11.png)
+![ws1-ws2](./linux_net/12.png)
 
 ### 2.1. [Добавление статического маршрута вручную](#21-добавление-статического-маршрута-вручную)
 
@@ -215,7 +217,8 @@ $ sudo ping -c 172.24.116.8
 $ sudo ping -c 192.168.100.10
 ```
 
-![connect](./linux_net/11.png)
+![connect](./linux_net/13.png)
+![connect](./linux_net/14.png)
 
 ### 2.2. [Добавление статического маршрута с сохранением](#22-добавление-статического-маршрута-с-сохранением)
 
@@ -239,12 +242,13 @@ $ sudo vim /etc/netplan/00-installer-config.yaml
 ``` shell
 $ sudo ping -c 172.24.116.8
 ```
+![connect](./linux_net/15.png)
 
 `ws2`
 ``` shell
 $ sudo ping -c 192.168.100.10
 ```
-![route](./linux_net/13.png)
+![route](./linux_net/16.png)
 
 
 ## 3. [Утилита iperf3](#3-утилита-iperf3)
@@ -277,7 +281,8 @@ $ iperf3 -s -f K
 $ iperf3 -c 192.168.100.10 -f K
 ```
 
-![Скорость ws1<->ws2](./linux_net/14.png)
+![Скорость ws1<->ws2](./linux_net/17.png)
+![Скорость ws1<->ws2](./linux_net/18.png)
 
 ## 4. [Сетевой экран](#4-сетевой-экран)
 
@@ -298,15 +303,16 @@ $ sudo apt-get install iptables
 $ sudo vim /etc/firewall.sh
 ```
 
-![iptables](./linux_net/15.png)
+![iptables](./linux_net/21.png)
+![iptables](./linux_net/22.png)
 
 > Запустить файлы на обеих машинах командами `chmod +x /etc/firewall.sh` и `sh /etc/firewall.sh`
 
-![iptables](./linux_net/16.png)
+![iptables](./linux_net/19.png)
 
 > Правила выполняться сверху-вниз, следовательно, если правило запрета находиться выше оно срабатывает, а правило разрешения находящиеся ниже нет. Следовательно 1ая машина не пингуется, а 2ая пингуется.
 :
-![iptables](./linux_net/17.png)
+![iptables](./linux_net/20.png)
 
 ### 4.2. [Утилита nmap](#42-утилита-nmap)
 
