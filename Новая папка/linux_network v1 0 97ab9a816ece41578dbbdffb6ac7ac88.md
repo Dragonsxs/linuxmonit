@@ -14,27 +14,27 @@
 
 ### 1) адрес сети *192.167.38.54/13*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/1.png)
+![Untitled](linux_net1.png)
 
 ### 2) перевод маски *255.255.255.0* в префиксную и двоичную запись, */15* в обычную и двоичную, *11111111.11111111.11111111.11110000* в обычную и префиксную
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/2.png)
+![Untitled](linux_net2.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/3.png)
+![Untitled](linux_net3.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/4.png)
+![Untitled](linux_net4.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/5.png)
+![Untitled](linux_net5.png)
 
 ### 3) минимальный и максимальный хост в сети *12.167.38.4* при масках: */8*, *11111111.11111111.00000000.00000000*, *255.255.254.0* и */4*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%205.png)
+![Untitled](linux_netUntitled%205.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%206.png)
+![Untitled](linux_netUntitled%206.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%207.png)
+![Untitled](linux_netUntitled%207.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%208.png)
+![Untitled](linux_netUntitled%208.png)
 
 ### 1.2. localhost
 
@@ -42,19 +42,19 @@
 
 *194.34.23.100* нельзя, не попадает в диапазон localhost
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%209.png)
+![Untitled](linux_netUntitled%209.png)
 
 127.0.0.2 можно, попадает в диапазон localhost
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2010.png)
+![Untitled](linux_netUntitled%2010.png)
 
 127.1.0.1 можно, попадает в диапазон localhost
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2011.png)
+![Untitled](linux_netUntitled%2011.png)
 
 128.0.0.1 нельзя, не попадает в диапазон localhost
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2012.png)
+![Untitled](linux_netUntitled%2012.png)
 
 ### 1.3. Диапазоны и сегменты сетей
 
@@ -64,39 +64,39 @@
 
 *10.0.0.45 - localhost*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2013.png)
+![Untitled](linux_netUntitled%2013.png)
 
 *134.43.0.2 - public*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2014.png)
+![Untitled](linux_netUntitled%2014.png)
 
 *192.168.4.2 - localhost*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2015.png)
+![Untitled](linux_netUntitled%2015.png)
 
 *172.0.2.1  - public*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2016.png)
+![Untitled](linux_netUntitled%2016.png)
 
 *192.172.0.1  - public*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2017.png)
+![Untitled](linux_netUntitled%2017.png)
 
 *172.68.0.2 - public*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2018.png)
+![Untitled](linux_netUntitled%2018.png)
 
 *172.16.255.255 - localhost*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2019.png)
+![Untitled](linux_netUntitled%2019.png)
 
 *10.10.10.10 - localhost*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2020.png)
+![Untitled](linux_netUntitled%2020.png)
 
 192.169.168.1 - *public*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2021.png)
+![Untitled](linux_netUntitled%2021.png)
 
 ### 2) какие из перечисленных IP адресов шлюза возможны у сети *10.10.0.0/18*: *10.0.0.1*, *10.10.0.2*, *10.10.10.10*, *10.10.100.1*, *10.10.1.255*
 
@@ -115,38 +115,38 @@
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 - ws1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2022.png)
+![Untitled](linux_netUntitled%2022.png)
 
 ws2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2023.png)
+![Untitled](linux_netUntitled%2023.png)
 
 ### Описать сетевой интерфейс, соответствующий внутренней сети, на обеих машинах и задать следующие адреса и маски: ws1 - *192.168.100.10*, маска */16*, ws2 - *172.24.116.8*, маска */12*
 
 - В отчёт поместить скрины с содержанием изменённого файла *etc/netplan/00-installer-config.yaml* для каждой машины.
 - ws2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2024.png)
+![Untitled](linux_netUntitled%2024.png)
 
 ws1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2025.png)
+![Untitled](linux_netUntitled%2025.png)
 
 ### Выполнить команду `netplan apply` для перезапуска сервиса сети
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2026.png)
+![Untitled](linux_netUntitled%2026.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2027.png)
+![Untitled](linux_netUntitled%2027.png)
 
 ### 2.1. Добавление статического маршрута вручную
 
 ### Добавить статический маршрут от одной машины до другой и обратно при помощи команды вида `ip r add`
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2028.png)
+![Untitled](linux_netUntitled%2028.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2029.png)
+![Untitled](linux_netUntitled%2029.png)
 
 ### Пропинговать соединение между машинами
 
@@ -160,20 +160,20 @@ ws1
 
 - В отчёт поместить скрин с содержанием изменённого файла *etc/netplan/00-installer-config.yaml*.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2030.png)
+![Untitled](linux_netUntitled%2030.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2031.png)
+![Untitled](linux_netUntitled%2031.png)
 
 ### Пропинговать соединение между машинами
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 - ws1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2032.png)
+![Untitled](linux_netUntitled%2032.png)
 
 ws2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2033.png)
+![Untitled](linux_netUntitled%2033.png)
 
 ## Part 3. Утилита **iperf3**
 
@@ -198,11 +198,11 @@ ws2
 - В отчёт поместить скрины с вызовом и выводом использованных команд.
 - ws1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2034.png)
+![Untitled](linux_netUntitled%2034.png)
 
 ws2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2035.png)
+![Untitled](linux_netUntitled%2035.png)
 
 ## Part 4. Сетевой экран
 
@@ -235,22 +235,22 @@ iptables -X
 
 - В отчёт поместить скрины с содержанием файла */etc/firewall* для каждой машины.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2036.png)
+![Untitled](linux_netUntitled%2036.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2037.png)
+![Untitled](linux_netUntitled%2037.png)
 
 ### Запустить файлы на обеих машинах командами `chmod +x /etc/firewall.sh` и `/etc/firewall.sh`
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2038.png)
+![Untitled](linux_netUntitled%2038.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2039.png)
+![Untitled](linux_netUntitled%2039.png)
 
 - В отчёт поместить скрины с запуском обоих файлов.
 - 
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2040.png)
+![Untitled](linux_netUntitled%2040.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2041.png)
+![Untitled](linux_netUntitled%2041.png)
 
 Главное отличие в стратегиях заключается в том, что в первом файле первым применяемым правилом для пакета является запрет, в то время как во втором файле - разрешение. В обоих случаях используется только первое подходящее правило, игнорируя остальные.
 
@@ -258,19 +258,19 @@ iptables -X
 
 ### Командой **ping** найти машину, которая не "пингуется", после чего утилитой **nmap** показать, что хост машины запущен
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2042.png)
+![Untitled](linux_netUntitled%2042.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2043.png)
+![Untitled](linux_netUntitled%2043.png)
 
 *Проверка: в выводе nmap должно быть сказано: `Host is up`*
 
 - В отчёт поместить скрины с вызовом и выводом использованных команд **ping** и **nmap**.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2044.png)
+![Untitled](linux_netUntitled%2044.png)
 
 ### Сохранить дампы образов виртуальных машин
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2045.png)
+![Untitled](linux_netUntitled%2045.png)
 
 **p.s. Ни в коем случае не сохранять дампы в гит!**
 
@@ -286,7 +286,7 @@ iptables -X
 
 ### Поднять пять виртуальных машин (3 рабочие станции (ws11, ws21, ws22) и 2 роутера (r1, r2))
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2046.png)
+![Untitled](linux_netUntitled%2046.png)
 
 ### 5.1. Настройка адресов машин
 
@@ -296,53 +296,53 @@ iptables -X
 
 ws11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2047.png)
+![Untitled](linux_netUntitled%2047.png)
 
 ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2048.png)
+![Untitled](linux_netUntitled%2048.png)
 
 ws22
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2049.png)
+![Untitled](linux_netUntitled%2049.png)
 
 r1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2050.png)
+![Untitled](linux_netUntitled%2050.png)
 
 r2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2051.png)
+![Untitled](linux_netUntitled%2051.png)
 
 ### Перезапустить сервис сети. Если ошибок нет, то командой `ip -4 a` проверить, что адрес машины задан верно. Также пропинговать ws22 с ws21. Аналогично пропинговать r1 с ws11.
 
 ws11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2052.png)
+![Untitled](linux_netUntitled%2052.png)
 
 ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2053.png)
+![Untitled](linux_netUntitled%2053.png)
 
 ws22
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2054.png)
+![Untitled](linux_netUntitled%2054.png)
 
 r1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2055.png)
+![Untitled](linux_netUntitled%2055.png)
 
 r2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2056.png)
+![Untitled](linux_netUntitled%2056.png)
 
 ping ws22 to ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2057.png)
+![Untitled](linux_netUntitled%2057.png)
 
 ping r1 to ws11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2058.png)
+![Untitled](linux_netUntitled%2058.png)
 
 ### 5.2. Включение переадресации IP-адресов.
 
@@ -352,11 +352,11 @@ ping r1 to ws11
 
 r1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2059.png)
+![Untitled](linux_netUntitled%2059.png)
 
 r2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2060.png)
+![Untitled](linux_netUntitled%2060.png)
 
 ### Откройте файл */etc/sysctl.conf* и добавьте в него следующую строку:
 
@@ -364,11 +364,11 @@ r2
 
 r1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2061.png)
+![Untitled](linux_netUntitled%2061.png)
 
 r2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2062.png)
+![Untitled](linux_netUntitled%2062.png)
 
 ### 5.3. Установка маршрута по-умолчанию
 
@@ -383,29 +383,29 @@ default via 10.10.0.1 dev eth0
 
 ws22
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2063.png)
+![Untitled](linux_netUntitled%2063.png)
 
 ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2064.png)
+![Untitled](linux_netUntitled%2064.png)
 
 ws11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2065.png)
+![Untitled](linux_netUntitled%2065.png)
 
 ### Вызвать `ip r` и показать, что добавился маршрут в таблицу маршрутизации
 
 ws11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2066.png)
+![Untitled](linux_netUntitled%2066.png)
 
 ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2067.png)
+![Untitled](linux_netUntitled%2067.png)
 
 ws22
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2068.png)
+![Untitled](linux_netUntitled%2068.png)
 
 ### 5.4. Добавление статических маршрутов
 
@@ -416,17 +416,17 @@ ws22
   via: 10.100.0.12
 ```
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2069.png)
+![Untitled](linux_netUntitled%2069.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2070.png)
+![Untitled](linux_netUntitled%2070.png)
 
 w22 to w21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2071.png)
+![Untitled](linux_netUntitled%2071.png)
 
 r1 to w11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2072.png)
+![Untitled](linux_netUntitled%2072.png)
 
 ### Вызвать `ip r` и показать таблицы с маршрутами на обоих роутерах. Пример таблицы на r1:
 
@@ -438,21 +438,21 @@ r1 to w11
 
 r1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2073.png)
+![Untitled](linux_netUntitled%2073.png)
 
 r2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2074.png)
+![Untitled](linux_netUntitled%2074.png)
 
 ws11 to r2
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2075.png)
+![Untitled](linux_netUntitled%2075.png)
 
 ### Запустить команды на ws11:
 
 `ip r list 10.10.0.0/[маска сети]` и `ip r list 0.0.0.0/0`
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2076.png)
+![Untitled](linux_netUntitled%2076.png)
 
 Для адреса *10.10.0.0/18* был выбран маршрут, отличный от *0.0.0.0/0* (он попадает под маршрут по-умолчанию), т.к. машина `ws11` соединена с сетью *10.10.0.0/18* по своему IP-адресу *10.10.0.2*, для других адресов используется маршрут по умолчанию, который указан в файле *10.10.0.1*.
 
@@ -472,9 +472,9 @@ ws11 to r2
 
 ### При помощи утилиты **traceroute** построить список маршрутизаторов на пути от ws11 до ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2077.png)
+![Untitled](linux_netUntitled%2077.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2078.png)
+![Untitled](linux_netUntitled%2078.png)
 
 > Каждый пакет проходит на своем пути определенное количество узлов, пока достигнет своей цели. Причем, каждый пакет имеет свое время жизни. Это количество узлов, которые может пройти пакет перед тем, как он будет уничтожен. Этот параметр записывается в заголовке TTL, каждый маршрутизатор, через который будет проходить пакет уменьшает его на единицу. При TTL=0 пакет уничтожается, а отправителю отсылается сообщение Time Exceeded.
 > 
@@ -484,11 +484,11 @@ ws11 to r2
 
 ### 5.6. Использование протокола **ICMP** при маршрутизации
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2079.png)
+![Untitled](linux_netUntitled%2079.png)
 
 ### Пропинговать с ws11 несуществующий IP (например, *10.30.0.111*) с помощью команды:
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2080.png)
+![Untitled](linux_netUntitled%2080.png)
 
 ## Part 6. Динамическая настройка IP с помощью **DHCP**
 
@@ -507,39 +507,39 @@ subnet 10.100.0.0 netmask 255.255.0.0 {}subnet 10.20.0.0 netmask 255.255.255.192
 {    range 10.20.0.2 10.20.0.50;    option routers 10.20.0.1;    option domain-name-servers 10.20.0.1;}
 ```
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2081.png)
+![Untitled](linux_netUntitled%2081.png)
 
 ### 2) в файле *resolv.conf* прописать `nameserver 8.8.8.8.`
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2082.png)
+![Untitled](linux_netUntitled%2082.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2083.png)
+![Untitled](linux_netUntitled%2083.png)
 
 ### Указать MAC адрес у ws11, для этого в *etc/netplan/00-installer-config.yaml* надо добавить строки: `macaddress: 10:10:10:10:10:BA`, `dhcp4: true`
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2084.png)
+![Untitled](linux_netUntitled%2084.png)
 
 ### Для r1 настроить аналогично r2, но сделать выдачу адресов с жесткой привязкой к MAC-адресу (ws11). Провести аналогичные тесты
 
 - В отчёте этот пункт описать аналогично настройке для r2.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2085.png)
+![Untitled](linux_netUntitled%2085.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2086.png)
+![Untitled](linux_netUntitled%2086.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2087.png)
+![Untitled](linux_netUntitled%2087.png)
 
 ### Запросить с ws21 обновление ip адреса
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2088.png)
+![Untitled](linux_netUntitled%2088.png)
 
 Команда для смены присвоенного ip - dhclient, утилита для управления адресом интерфейса по протоколу DHCP.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2089.png)
+![Untitled](linux_netUntitled%2089.png)
 
 ### Сохранить дампы образов виртуальных машин
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2090.png)
+![Untitled](linux_netUntitled%2090.png)
 
 ## Part 7. **NAT**
 
@@ -553,13 +553,13 @@ subnet 10.100.0.0 netmask 255.255.0.0 {}subnet 10.20.0.0 netmask 255.255.255.192
 
 сначала нжуно установить apache2 (sudo apt install apache2)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2091.png)
+![Untitled](linux_netUntitled%2091.png)
 
 ### Запустить веб-сервер Apache командой `service apache2 start` на ws22 и r1
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2092.png)
+![Untitled](linux_netUntitled%2092.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2093.png)
+![Untitled](linux_netUntitled%2093.png)
 
 ### Добавить в фаервол, созданный по аналогии с фаерволом из Части 4, на r2 следующие правила:
 
@@ -569,41 +569,41 @@ subnet 10.100.0.0 netmask 255.255.0.0 {}subnet 10.20.0.0 netmask 255.255.255.192
 
 ### 3) отбрасывать все маршрутизируемые пакеты - `iptables --policy FORWARD DROP`
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2094.png)
+![Untitled](linux_netUntitled%2094.png)
 
 ### Запускать файл также, как в Части 4
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2095.png)
+![Untitled](linux_netUntitled%2095.png)
 
 ### Проверить соединение между ws22 и r1 командой `ping`
 
 *При запуске файла с этими правилами, ws22 не должна "пинговаться" с r1*
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2096.png)
+![Untitled](linux_netUntitled%2096.png)
 
 ### Добавить в файл ещё одно правило:
 
 ### 4) разрешить маршрутизацию всех пакетов протокола **ICMP**
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2097.png)
+![Untitled](linux_netUntitled%2097.png)
 
 ### Сначала прописываем общую политику отбрасывать все маршрутизируемые пакеты, затем добавляем разрешение icmp-пакетов для прохода пинга. Без разрешения (на первом скрине) ws22 не пингуется r1, с разрешением (на втором скрине) пингуется.
 
 ### 
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2098.png)
+![Untitled](linux_netUntitled%2098.png)
 
 ### Добавить в файл ещё два правила:
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%2099.png)
+![Untitled](linux_netUntitled%2099.png)
 
 ### Запускать файл также, как в Части 4
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20100.png)
+![Untitled](linux_netUntitled%20100.png)
 
 ### Для следующей части задания я разрешил проходить tcp-пакетам через r2 и добавил к настройкам apache2 на ws22 прослушивание 8080 порта. Прописанные для SNAT и DNAT строчки в скрипте представлены на скрине. r1 подключается к ws22 и наоборот.
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20101.png)
+![Untitled](linux_netUntitled%20101.png)
 
 ## Part 8. Дополнительно. Знакомство с **SSH Tunnels**
 
@@ -619,20 +619,20 @@ subnet 10.100.0.0 netmask 255.255.0.0 {}subnet 10.20.0.0 netmask 255.255.255.192
 
 ### Запустить веб-сервер **Apache** на ws22 только на localhost (то есть в файле */etc/apache2/ports.conf* изменить строку `Listen 80` на `Listen localhost:80`)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20102.png)
+![Untitled](linux_netUntitled%20102.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20103.png)
+![Untitled](linux_netUntitled%20103.png)
 
 ws21
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20104.png)
+![Untitled](linux_netUntitled%20104.png)
 
 ws11
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20105.png)
+![Untitled](linux_netUntitled%20105.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20106.png)
+![Untitled](linux_netUntitled%20106.png)
 
-![Untitled](linux_network%20v1%200%2097ab9a816ece41578dbbdffb6ac7ac88/Untitled%20107.png)
+![Untitled](linux_netUntitled%20107.png)
 
 ##
