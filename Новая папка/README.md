@@ -326,18 +326,18 @@ $ sudo apt-get install nmap
 
 > Поднять пять виртуальных машин (3 рабочие станции (ws11, ws21, ws22) и 2 роутера (r1, r2));
 `Сеть`
-![сеть](./linux_net/19.png)
+![сеть](./linux_net/Untitled%2046.png)
 
 ### 5.1. [Настройка адресов машин](#51-настройка-адресов-машин)
 > Настроить конфигурации машин в etc/netplan/00-installer-config.yaml согласно сети на рисунке.
 ``` shell
 $ sudo vim /etc/netplan/00-installer-config.yaml
 ```
-![сеть](./linux_net/20.png)
-![сеть](./linux_net/21.png)
-![сеть](./linux_net/22.png)
-![сеть](./linux_net/23.png)
-![сеть](./linux_net/24.png)
+![сеть](./linux_net/Untitled%2047.png)
+![сеть](./linux_net/Untitled%2048.png)
+![сеть](./linux_net/Untitled%2049.png)
+![сеть](./linux_net/Untitled%2050.png)
+![сеть](./linux_net/Untitled%2051.png)
 > Перезапустить сервис сети;
 ``` shell
 $ sudo netplan apply
@@ -346,19 +346,22 @@ $ sudo netplan apply
 ``` shell 
 $ ip -4 a
 ```
-![сеть](./linux_net/25.png)
-
+![сеть](./linux_net/Untitled%2052.png)
+![сеть](./linux_net/Untitled%2053.png)
+![сеть](./linux_net/Untitled%2054.png)
+![сеть](./linux_net/Untitled%2055.png)
+![сеть](./linux_net/Untitled%2056.png)
 > Также пропинговать ws22 с ws21; 
 ``` shell 
 $ ping -c 5 10.20.0.20
 ```
-![сеть](./linux_net/26.png)
+![сеть](./linux_net/Untitled%2057.png)
 
 > Аналогично пропинговать r1 с ws11.
 ``` shell 
 $ ping -c 5 10.10.0.1
 ```
-![сеть](./linux_net/27.png)
+![сеть](./linux_net/Untitled%2058.png)
 
 ### 5.2 [Включение переадресации IP-адресов](#52-включение-переадресации-ip-адресов)
 
@@ -368,15 +371,16 @@ $ ping -c 5 10.10.0.1
 $ sudo sysctl -w net.ipv4.ip_forward=1
 ```
 
-![переадресация](./linux_net/28.png)
+![сеть](./linux_net/Untitled%2059.png)
 
 > `r1`
 
-![переадресация](./linux_net/29.png)
+![переадресация](./linux_net/Untitled%2060.png)
+![переадресация](./linux_net/Untitled%2061.png)
 
 > `r2`
 
-![переадресация](./linux_net/30.png)
+![переадресация](./linux_net/Untitled%2062.png)
 
 ``` shell 
 $ sudo sysctl -p
@@ -390,19 +394,22 @@ $ sudo sysctl -p
 $ sudo vim /etc/netplan/00-installer-config.yaml
 ```
 
-![по-умолчанию](./linux_net/31_1.png)
+![по-умолчанию](./linux_net/Untitled%2063.png)
+![по-умолчанию](./linux_net/Untitled%2064.png)
+![по-умолчанию](./linux_net/Untitled%2065.png)
 
 ``` shell 
 $ ip r
 ```
-![по-умолчанию](./linux_net/32.png)
-
+![по-умолчанию](./linux_net/Untitled%2066.png)
+![по-умолчанию](./linux_net/Untitled%2067.png)
+![по-умолчанию](./linux_net/Untitled%2068.png)
 > Пропинговать с ws11 роутер r2 и показать на r2, что пинг доходит. Для этого использовать команду:
 ``` shell 
 $ sudo tcpdump -tn -i enp0s3
 ```
 
-![tcpdump](./linux_net/33_1.png)
+![tcpdump](./linux_net/Untitled%2077.png)
 
 ### 5.4. [Добавление статических маршрутов](#54-добавление-статических-маршрутов)
 
